@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src="/assets/js/jquery-2.2.0.min.js"></script>
+</head>
+<body>
+<center>
+<h2>Inventory Update Tool</h2>
+<ol id="scanList"></ol>
+
+<script type="text/javascript">
+function sendArray()
+{
+	while(1){
+		//for(i=0; ; i++){ //for future imp of listing good values
+		//count = i+1;
+		var ourObj = {};
+		ourObj.itemId = prompt("Scan ID:");
+		if(ourObj.itemId === null || ourObj.itemId ==""){//break if 'cancel' clicked
+			return;
+		}
+		ourObj.amountAdj = prompt("Enter amount:");
+		if(ourObj.amountAdj === null || ourObj.itemId ==""){//break if 'cancel' clicked
+			return;
+		}
+		$.ajax({
+			url: "save.php",
+			type: "POST",
+			data: { invAdj : JSON.stringify(ourObj)},
+			//success: function(response)
+				//{
+				//	alert("data sent response is "+response);
+				//},
+			error: function(e)
+				{
+					alert("data not sent"+e);
+				}
+		});}
+}
+</script>
+<button onclick="sendArray();">Start</button>
+</center>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src="/assets/js/jquery-2.2.0.min.js"></script>
+</head>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="saveReason()">Try it</button>
+
+<!--<ol id="demo"></ol>-->
+
+<!--<script>
+function myFunction() {
+    var txt=[];
+    var i;
+    var count;
+    var barCode=[]; 
+    var updAmt=[];
+    var html = "";
+    
+    for (i=0; i<3; i++) {
+    count = i+1;
+    barCode[i] = prompt("Please scan barcode for item "+ count +": ");
+    if (barCode[i] == null || barCode[i] == "") {
+        txt[i] = "User cancelled the prompt. </br>";
+        html += "<li>"+txt[i]+"</li>";
+    } else {
+        updAmt[i] = prompt("Enter adjustment amount:"); 
+        txt[i] = "Barcode: " + barCode[i] + "  Amount: "+updAmt[i]+"</br>";
+        html += "<li>"+txt[i]+"</li>";
+    }
+    document.getElementById("demo").innerHTML = html;
+}}
+</script>
+<script>
+function saveReason() {
+	var reason=prompt("enter amount change:","");
+	if(reason!=null && reason!="") {
+		$.post("save.php", { reason: reason});
+	}
+}
+</script>-->
+<script type="text/javascript">
+function sendArray()
+{
+	var itemId = prompt("Scan ID:");
+	var adjAmt = prompt("Enter amount:");
+
+	$.ajax({
+		type: "POST",
+		url: "save.php",
+		data: {adjAmt: adjAmt,},
+		success: function(response)
+			{
+				alert("data sent response is "+response);
+			},
+		error: function(e)
+			{
+				alert("data not sent"+e);
+			}
+	});
+}
+</script>
+<button onclick="sendArray();">Send Array</button>
+
+</body>
+</html>
+
