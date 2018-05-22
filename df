@@ -1,0 +1,35 @@
+[33mcommit 568fff0ec75e9c77e21dd210684b6e616c8d0046[m
+Author: tutoro <twmr1980@gmail.com>
+Date:   Mon May 21 21:46:49 2018 -0500
+
+    updated menu board.  about 25% completed.
+
+[33mcommit 7fba0c1bfe0c74089359f9be76b9cf294835cb1f[m
+Author: tutoro <twmr1980@gmail.com>
+Date:   Thu May 17 23:40:05 2018 -0500
+
+    log file fuctionality added to inv tool
+
+[33mcommit 526f405ca8a9e2fae99c071e51ef078b37162f01[m
+Author: tutoro <twmr1980@gmail.com>
+Date:   Wed May 16 22:08:07 2018 -0500
+
+    latest update to inventory update tool
+
+[33mcommit efe4f1943ea5b27fde87ee7297aa2bc6f67ea01f[m
+Author: tutoro <twmr1980@gmail.com>
+Date:   Sat May 12 23:05:05 2018 -0500
+
+    README.md created and updated with tonights changes
+
+[33mcommit 1df2a6117499b6d861703fcbe327ac9d38757add[m
+Author: tutoro <twmr1980@gmail.com>
+Date:   Sat May 12 23:00:44 2018 -0500
+
+    added buttons for coffee all day, needs backend javascript added
+
+[33mcommit 7ed6bb9c658ef2680eeebcf5c897f56543753138[m
+Author: tutoro <twmr1980@gmail.com>
+Date:   Sat May 12 20:40:11 2018 -0500
+
+    icon for allday coffee added; no functionality
