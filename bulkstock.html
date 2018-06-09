@@ -7,7 +7,7 @@
 </head>
 <body>
 <center>
-<h2>Inventory Update Tool</h2>
+<h2>Bulk Inventory Update Tool</h2>
 <ol id="scanList"></ol>
 
 <script type="text/javascript">
@@ -21,12 +21,12 @@ function sendArray()
 		if(ourObj.itemId === null || ourObj.itemId ==""){//break if 'cancel' clicked
 			return;
 		}
-		ourObj.amountAdj = prompt("Enter amount:");
+		/*ourObj.amountAdj = prompt("Enter amount:");
 		if(ourObj.amountAdj === null || ourObj.itemId ==""){//break if 'cancel' clicked
-			return;
-		}
+			return;*/
+		//}
 		$.ajax({
-			url: "save.php",
+			url: "bulkSave.php",
 			type: "POST",
 			data: { invAdj : JSON.stringify(ourObj)},
 			//success: function(response)

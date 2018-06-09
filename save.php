@@ -1,7 +1,7 @@
 <?php
 
 //create mysql connection
-$link = new mysqli("localhost", "root", "P0Peyethesailor12!!", "wallacetest");
+$link = new mysqli("localhost", "root", "P0Peyethesailor12!!", "wallacepos");
 
 //check connection
 if($link->connect_error){
